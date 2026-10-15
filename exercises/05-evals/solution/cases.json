@@ -1,0 +1,14 @@
+[
+  {"question": "How much is a basic service?", "reference": "A basic service costs 45 pounds.", "answer": "It's £45.", "correct": true},
+  {"question": "How much is a basic service?", "reference": "A basic service costs 45 pounds.", "answer": "A basic service costs 55 pounds.", "correct": false},
+  {"question": "How long do I have to return an unused bike?", "reference": "30 days from purchase.", "answer": "You have thirty days.", "correct": true},
+  {"question": "How long do I have to return an unused bike?", "reference": "30 days from purchase.", "answer": "30 days, and we also pay the return shipping of 15 pounds.", "correct": false},
+  {"question": "Can I return a bike I've ridden?", "reference": "No. Ridden bikes can only be exchanged for store credit.", "answer": "No, but you can exchange it for store credit.", "correct": true},
+  {"question": "Can I return a bike I've ridden?", "reference": "No. Ridden bikes can only be exchanged for store credit.", "answer": "Yes, you can return it for a full refund.", "correct": false},
+  {"question": "What time does the Leeds store close?", "reference": "It closes at 18:00.", "answer": "We close at 6pm.", "correct": true},
+  {"question": "What time does the Leeds store close?", "reference": "It closes at 18:00.", "answer": "I'm not sure, please contact the store.", "correct": false},
+  {"question": "What is the staff discount on clothing?", "reference": "40 percent off clothing.", "answer": "Staff get 40% off clothes.", "correct": true},
+  {"question": "How much is Northwind Care?", "reference": "9 pounds a month.", "answer": "It's £9 per month.", "correct": true},
+  {"question": "How much is Northwind Care?", "reference": "9 pounds a month.", "answer": "£9 per month, with 3 free services a year.", "correct": false},
+  {"question": "Who approves refunds outside the rules?", "reference": "Only a manager can approve them.", "answer": "A manager has to approve it.", "correct": true}
+]

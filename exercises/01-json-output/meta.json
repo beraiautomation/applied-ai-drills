@@ -1,0 +1,13 @@
+{
+  "number": 1,
+  "id": "01-json-output",
+  "title": "Clean JSON from a messy model",
+  "skill": "Structured output",
+  "summary": "The model wraps JSON in chatter, gets types wrong, or fails. Return clean data every time.",
+  "files": ["product.py"],
+  "hints": [
+    "Don't json.loads the whole reply. Find the part from the first { to the last }.",
+    "Write one small function per fix: strip fences, find the object, remove trailing commas, coerce types. Then validate every key.",
+    "Wrap parse + validate in a loop of at most 3 attempts. When it fails, put the error message into the next prompt."
+  ]
+}

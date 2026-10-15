@@ -1,0 +1,13 @@
+{
+  "number": 3,
+  "id": "03-tool-calling",
+  "title": "Safe tool calls",
+  "skill": "Tool calling",
+  "summary": "The model calls tools with bad arguments and the app crashes. Validate everything and return clear errors.",
+  "files": ["tools.py"],
+  "hints": [
+    "Wrap everything in one try/except so execute() never raises. Parse the arguments with json.loads and catch bad JSON.",
+    "Check against TOOLS: unknown tool, missing required field, unknown extra field, wrong type, pattern and enum. Put the field name in every error.",
+    "Numbers may arrive as text like \"12.50\". Convert them, but reject booleans and words. Check the refund amount against the order total last."
+  ]
+}

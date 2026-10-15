@@ -1,0 +1,13 @@
+{
+  "number": 5,
+  "id": "05-evals",
+  "title": "An eval that catches wrong answers",
+  "skill": "Evals",
+  "summary": "The eval says everything passes, or nothing does. Write a grader that catches wrong and made-up answers.",
+  "files": ["grader.py"],
+  "hints": [
+    "Pull the numbers out of the reference and the answer, and normalize them: '$1,450', '1450 dollars' and '1,450.00' are all 1450. Turn small number words like 'two' into digits too.",
+    "Wrong if a reference number is missing from the answer. Also wrong if the answer adds a number that isn't in the reference or the question: that's a made-up detail.",
+    "Handle yes/no answers: the answer must agree. Treat 'I don't know' style answers as wrong. For answers with no numbers, check that most of the reference's key words appear."
+  ]
+}

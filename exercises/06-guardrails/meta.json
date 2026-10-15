@@ -1,0 +1,13 @@
+{
+  "number": 6,
+  "id": "06-guardrails",
+  "title": "A refund bot that can't be tricked",
+  "skill": "Guardrails",
+  "summary": "Customers talk the bot into refunds it shouldn't give. Enforce the policy in code, not in the prompt.",
+  "files": ["refunds.py"],
+  "hints": [
+    "Ignore the message text completely. The decision must come only from the order data and the amount.",
+    "Check in this order: order exists, belongs to this customer, within 30 days, amount is a number above 0, amount fits what's left after earlier refunds.",
+    "Parse dates with datetime.date.fromisoformat and amounts like '$45.00' by removing the symbol. Return approve up to 50, needs_human above 50."
+  ]
+}

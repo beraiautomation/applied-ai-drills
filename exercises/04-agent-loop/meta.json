@@ -1,0 +1,13 @@
+{
+  "number": 4,
+  "id": "04-agent-loop",
+  "title": "An agent that knows when to stop",
+  "skill": "Agent loop",
+  "summary": "The agent loops forever and crashes when a tool fails. Add limits, loop detection and error handling.",
+  "files": ["agent.py"],
+  "hints": [
+    "Replace while True with a for loop over max_steps. Count every call to model.next().",
+    "Keep a Counter of (tool name, args) seen so far. Use json.dumps(args, sort_keys=True) to make args comparable.",
+    "Run tools inside try/except. On error or unknown tool, add a tool message that starts with 'error:' and let the model try again."
+  ]
+}

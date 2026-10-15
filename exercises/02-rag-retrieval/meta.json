@@ -1,0 +1,13 @@
+{
+  "number": 2,
+  "id": "02-rag-retrieval",
+  "title": "Find the right part of the document",
+  "skill": "RAG retrieval",
+  "summary": "The search behind a staff Q&A bot keeps returning the wrong text. Fix chunking and ranking.",
+  "files": ["rag.py"],
+  "hints": [
+    "Split on the ## headings first. A section is a natural chunk. Only split a long section further, at sentence or paragraph ends.",
+    "Score chunks by word overlap, but ignore common words like 'the', 'how', 'do', and lower-case everything.",
+    "Rare words matter more than common ones. Try TF-IDF or BM25: weight each word by how few chunks contain it. Also match simple word forms, like 'refunds' and 'refund'."
+  ]
+}
