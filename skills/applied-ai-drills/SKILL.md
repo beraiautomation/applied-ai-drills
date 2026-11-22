@@ -1,6 +1,6 @@
 ---
 name: applied-ai-drills
-description: Coach the user through applied-ai-drills, hands-on AI engineering exercises (structured output, RAG, tool calling, agent loops, evals, guardrails) that are graded by code. Use when the user wants to practice AI engineering, prepare for AI engineer interviews, or asks about a drill.
+description: Coach the user through applied-ai-drills, hands-on AI engineering exercises (structured output, RAG, tool calling, agent loops, evals, guardrails, LLM-as-a-judge) that are graded by code. Use when the user wants to practice AI engineering, prepare for AI engineer interviews, or asks about a drill.
 ---
 
 # Applied AI Drills coach

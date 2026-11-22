@@ -1,0 +1,14 @@
+[
+  {"question": "How much is a basic service?", "reference": "A basic service costs 45 pounds.", "answer_a": "It's £45.", "answer_b": "A basic service is 45 pounds.", "human": "tie"},
+  {"question": "How much is a basic service?", "reference": "A basic service costs 45 pounds.", "answer_a": "A basic service is great value at 55 pounds, and it includes a safety check and a free brake adjustment.", "answer_b": "45 pounds.", "human": "B"},
+  {"question": "What time does the Leeds store close?", "reference": "It closes at 18:00.", "answer_a": "We close at 6pm.", "answer_b": "Our Leeds store is open late and closes at 9pm, so you can come after work.", "human": "A"},
+  {"question": "What time does the Leeds store close?", "reference": "It closes at 18:00.", "answer_a": "18:00.", "answer_b": "It closes at 6pm.", "human": "tie"},
+  {"question": "How long do I have to return an unused bike?", "reference": "30 days from purchase.", "answer_a": "You have 30 days from purchase.", "answer_b": "You have 30 days, and we pay the return shipping of 15 pounds.", "human": "A"},
+  {"question": "Can I return a bike I've ridden?", "reference": "No. Ridden bikes can only be exchanged for store credit.", "answer_a": "Yes, we take back ridden bikes for a full refund to your card within a week.", "answer_b": "No, only store credit.", "human": "B"},
+  {"question": "What is the staff discount on clothing?", "reference": "40 percent off clothing.", "answer_a": "Staff get 40% off clothes.", "answer_b": "Staff get a discount on clothing.", "human": "A"},
+  {"question": "Where is the fire box for batteries?", "reference": "In the workshop, next to the back door.", "answer_a": "Please contact support about batteries.", "answer_b": "In the workshop, by the back door.", "human": "B"},
+  {"question": "How many days can a test ride last?", "reference": "One day.", "answer_a": "A test ride lasts one day.", "answer_b": "You can keep the bike for 3 days on a test ride, which gives you time to try it on your commute.", "human": "A"},
+  {"question": "Do you sell second-hand bikes?", "reference": "Yes, at the York store only.", "answer_a": "Yes, but only at the York store.", "answer_b": "Yes, at our York store.", "human": "tie"},
+  {"question": "How much is the Trail X helmet?", "reference": "The Trail X helmet costs 60 pounds.", "answer_a": "£60, or £50 for members.", "answer_b": "It costs 60 pounds.", "human": "B"},
+  {"question": "Is parking free at the York store?", "reference": "Yes, for 2 hours.", "answer_a": "Yes, for up to 2 hours.", "answer_b": "No, parking is paid.", "human": "A"}
+]

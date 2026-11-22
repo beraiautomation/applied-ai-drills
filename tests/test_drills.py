@@ -19,9 +19,9 @@ def passed(checks):
 
 
 class EveryDrill(unittest.TestCase):
-    def test_six_drills_with_hints_and_readmes(self):
+    def test_seven_drills_with_hints_and_readmes(self):
         drills = all_drills()
-        self.assertEqual([d.number for d in drills], [1, 2, 3, 4, 5, 6])
+        self.assertEqual([d.number for d in drills], [1, 2, 3, 4, 5, 6, 7])
         for d in drills:
             self.assertGreaterEqual(len(d.hints), 3)
             self.assertTrue((d.folder / "README.md").exists())
@@ -85,6 +85,27 @@ def retrieve(chunks, question, k=3):
             '        return {"action": "approve", "amount": 1.0, "reason": "asked nicely"}\n'
             '    order = get_order(request.get("order_id"))')
         self.assertFalse(passed(self.attempt("6", refunds__py=code)))
+
+    def test_judge_that_always_says_tie_fails(self):
+        code = (find("7").solution / "judge.py").read_text() + (
+            "\n\ndef judge_pair(model, question, answer_a, answer_b, reference=None):\n"
+            "    return {\"winner\": \"tie\", \"confident\": False}\n")
+        self.assertFalse(passed(self.attempt("7", judge__py=code)))
+
+    def test_judge_without_the_reference_fails(self):
+        code = (find("7").solution / "judge.py").read_text().replace(
+            "model.judge(question, first, second, reference=reference)", "model.judge(question, first, second)")
+        self.assertFalse(passed(self.attempt("7", judge__py=code)))
+
+    def test_measure_that_always_trusts_fails(self):
+        code = (find("7").solution / "judge.py").read_text().replace(
+            '"trusted": n >= min_labels and agreement >= 0.8', '"trusted": True')
+        self.assertFalse(passed(self.attempt("7", judge__py=code)))
+
+    def test_editing_the_judge_model_fails(self):
+        r = self.attempt("7", judge_model__py="class JudgeModel:\n    calls = 0\n\n"
+                         "    def judge(self, *a, **k):\n        return '[[A]]'\n")
+        self.assertFalse(passed(r))
 
 
 if __name__ == "__main__":

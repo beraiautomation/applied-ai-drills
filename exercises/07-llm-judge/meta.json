@@ -1,0 +1,13 @@
+{
+  "number": 7,
+  "id": "07-llm-judge",
+  "title": "An LLM judge you can trust",
+  "skill": "LLM-as-a-judge",
+  "summary": "The judge picks the longer answer, picks whichever it saw first, and nobody checked it. Fix it and measure it.",
+  "files": ["judge.py"],
+  "hints": [
+    "parse_verdict: look for [[A]], [[B]] or [[C]] first and use the last one. If there's none, look for 'verdict:', 'winner:' or 'final answer:' followed by A, B or tie. Never decide from a letter A somewhere in the text: 'Answer B' has an A in it.",
+    "judge_pair: pass the reference to model.judge(). Then ask twice, once as (a, b) and once as (b, a), and flip the second verdict back. If the two disagree, it's a tie and you're not confident. If a reply has no verdict, ask that order once more.",
+    "measure: count every row, including ties. A tie from the judge is an answer, not something to skip. Agreement is matches divided by all rows, and a judge is only trusted with at least min_labels rows and 80% agreement."
+  ]
+}
